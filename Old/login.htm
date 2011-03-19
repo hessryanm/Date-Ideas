@@ -1,0 +1,36 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="mainstyle.css">
+<title>Log In</title>
+<script type="text/javascript" src="validate.js"></script>
+</head>
+<body>
+<p id="home">
+<div class="title">Online Date Ideas</div>
+<div class="search">Search: 
+<form style="display:inline" name="search" action="successpage.htm"><input type="text" name="query" />
+<a href="javascript: searchSubmit()"><img src="seo.png" alt="Search" title="Search" /></a></form></div>
+</p>
+<p class="titleback">Online Date Ideas</p>
+<ul class="menu">
+	<li><a href="mainpage.htm#home">home</a></li>
+	<li><a href="submit.htm">post an idea</a></li>
+	<li><a href="#about">about us</a></li>
+	<li><a href="#contact">contact us</a></li>
+	<li><a href="#login">log in</a></li>
+</ul>
+<h3 class="center">Please Log In</h3>
+<div class="center">
+<form name="login" onsubmit="validatelogin()" action="successpage.htm">
+<p style="text-align:center">Username: <input type="text" id="Username" name="uname" onblur="validate(this,'username_val','length',5,20)" />
+<span class="help" id="username_val"></span></p>
+<p style="text-align:center">Password: <input type="password" id="Password" name="pass" onblur="validate(this,'password_val','length',5,20)"/>
+<span class="help" id="password_val"></span></p>
+<p style="text-align:center"><input type="button" value="Submit" onclick="loginSubmit(this.form)"/></p>
+</form>
+
+<p class="fine">Don't have an account?  Click <a href="register.htm">here</a> to register.</p>
+</div>
+
+</body>
+</html>
